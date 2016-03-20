@@ -9,7 +9,6 @@
             <connections>
                 <outlet property="contentSplitView" destination="352" id="356"/>
                 <outlet property="progressIndicator" destination="399" id="400"/>
-                <outlet property="sourceListControlsView" destination="393" id="395"/>
                 <outlet property="sourceSplitView" destination="353" id="355"/>
                 <outlet property="splitView" destination="351" id="357"/>
                 <outlet property="statusField" destination="397" id="401"/>
@@ -50,10 +49,6 @@
                             <outlet property="delegate" destination="-2" id="354"/>
                         </connections>
                     </splitView>
-                    <customView id="393" userLabel="Source List Controls View">
-                        <rect key="frame" x="0.0" y="1" width="333" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </customView>
                     <customView id="396" userLabel="Status View">
                         <rect key="frame" x="364" y="0.0" width="246" height="31"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -76,48 +71,9 @@
                     <customView id="443" userLabel="RefreshTermFind View">
                         <rect key="frame" x="624" y="0.0" width="246" height="31"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button verticalHuggingPriority="750" id="430">
-                                <rect key="frame" x="110" y="3" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRefreshTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="431">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="refresh:" target="-2" id="432"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" id="435">
-                                <rect key="frame" x="143" y="3" width="70" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="roundTextured" title="Console" alternateTitle="Terminal" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="436">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="openInTerminal:" target="-2" id="438"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" id="439">
-                                <rect key="frame" x="221" y="3" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="roundTextured" alternateTitle="Reveal" bezelStyle="texturedRounded" image="NSRevealFreestandingTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="440">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <connections>
-                                        <action selector="revealInFinder:" target="-2" id="442"/>
-                                    </connections>
-                                </buttonCell>
-                            </button>
-                        </subviews>
                     </customView>
                 </subviews>
             </view>
         </window>
     </objects>
-    <resources>
-        <image name="NSRefreshTemplate" width="11" height="15"/>
-        <image name="NSRevealFreestandingTemplate" width="14" height="14"/>
-    </resources>
 </document>

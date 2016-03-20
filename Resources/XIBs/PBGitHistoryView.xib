@@ -405,7 +405,7 @@
                                                     <webView focusRingType="none" id="21">
                                                         <rect key="frame" x="1" y="0.0" width="954" height="234"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <webPreferences key="preferences" defaultFontSize="10" defaultFixedFontSize="12"/>
+                                                        <webPreferences key="preferences" defaultFontSize="10" defaultFixedFontSize="10"/>
                                                         <connections>
                                                             <outlet property="UIDelegate" destination="40" id="85"/>
                                                             <outlet property="frameLoadDelegate" destination="40" id="84"/>
@@ -482,7 +482,7 @@
                                                                     <webView id="450" userLabel="FileViewer">
                                                                         <rect key="frame" x="0.0" y="0.0" width="723" height="210"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                        <webPreferences key="preferences" defaultFontSize="10" defaultFixedFontSize="12"/>
+                                                                        <webPreferences key="preferences" defaultFontSize="10" defaultFixedFontSize="10"/>
                                                                     </webView>
                                                                     <customView id="475" userLabel="TypeBar" customClass="MGScopeBar">
                                                                         <rect key="frame" x="0.0" y="211" width="723" height="24"/>
