@@ -87,13 +87,5 @@
 	</array>
 	<key>OSAScriptingDefinition</key>
 	<string>GitX.sdef</string>
-	<key>SUFeedURL</key>
-	<string>https://s3.amazonaws.com/builds.phere.net/GitX/development/GitX-dev.xml</string>
-	<key>SUPublicDSAKeyFile</key>
-	<string>UpdateKey.pem</string>
-	<key>SUEnableAutomaticChecks</key>
-	<true/>
-	<key>SUAllowsAutomaticUpdates</key>
-	<true/>
 </dict>
 </plist>

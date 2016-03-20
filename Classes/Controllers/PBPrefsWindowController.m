@@ -22,8 +22,7 @@
 	[self addView:generalPrefsView label:@"General" image:[NSImage imageNamed:@"gitx"]];
 	// INTERGRATION
 	[self addView:integrationPrefsView label:@"Integration" image:[NSImage imageNamed:NSImageNameNetwork]];
-	// UPDATES
-	[self addView:updatesPrefsView label:@"Updates"];
+
 }
 
 - (void)displayViewForIdentifier:(NSString *)identifier animate:(BOOL)animate
@@ -33,14 +32,6 @@
 	[[NSUserDefaults standardUserDefaults] setObject:identifier forKey:kPreferenceViewIdentifier];
 }
 
-- (NSString *)defaultViewIdentifier
-{
-	NSString *identifier = [[NSUserDefaults standardUserDefaults] objectForKey:kPreferenceViewIdentifier];
-	if (identifier)
-		return identifier;
-
-	return [super defaultViewIdentifier];
-}
 
 #pragma mark -
 #pragma mark Delegate methods

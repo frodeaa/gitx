@@ -13,7 +13,6 @@
 	/* Outlets for Preference Views */
 	IBOutlet NSView *generalPrefsView;
 	IBOutlet NSView *integrationPrefsView;
-	IBOutlet NSView *updatesPrefsView;
 
 	/* Variables for the Updates View */
 	IBOutlet NSPathControl *gitPathController;
