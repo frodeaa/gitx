@@ -307,20 +307,6 @@
                 <menuItem title="View" id="338">
                     <menu key="submenu" title="View" id="339">
                         <items>
-                            <menuItem title="Show Toolbar" keyEquivalent="t" id="341">
-                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
-                                <connections>
-                                    <action selector="toggleToolbarShown:" target="-1" id="342"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Customize Toolbar…" id="340">
-                                <connections>
-                                    <action selector="runToolbarCustomizationPalette:" target="-1" id="343"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="847">
-                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
-                            </menuItem>
                             <menuItem title="History" keyEquivalent="1" id="927">
                                 <connections>
                                     <action selector="showHistoryView:" target="-1" id="930"/>
@@ -377,26 +363,6 @@
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Help" id="103">
-                    <menu key="submenu" title="Help" id="106">
-                        <items>
-                            <menuItem title="GitX Help" keyEquivalent="?" id="111">
-                                <connections>
-                                    <action selector="showHelp:" target="205" id="932"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Report a problem" id="969">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="reportAProblem:" target="205" id="971"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Discuss GitX" id="972">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                            </menuItem>
-                        </items>
-                    </menu>
-                </menuItem>
             </items>
         </menu>
         <customObject id="205" userLabel="ApplicationController" customClass="ApplicationController">
@@ -407,17 +373,5 @@
         <customObject id="908" customClass="PBRepositoryDocumentController"/>
         <userDefaultsController representsSharedInstance="YES" id="912"/>
         <customObject id="918" customClass="SUUpdater"/>
-        <menuItem title="Check for Updates…" id="919">
-            <modifierMask key="keyEquivalentModifierMask"/>
-            <connections>
-                <action selector="checkForUpdates:" target="918" id="920"/>
-            </connections>
-        </menuItem>
-        <menuItem title="Latest changes" id="974" userLabel="Menu Item - Change Log">
-            <modifierMask key="keyEquivalentModifierMask"/>
-            <connections>
-                <action selector="showChangeLog:" target="205" id="976"/>
-            </connections>
-        </menuItem>
     </objects>
 </document>
