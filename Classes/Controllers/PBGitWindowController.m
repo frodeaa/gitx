@@ -79,7 +79,7 @@
 	[[self window] setContentBorderThickness:31.0f forEdge:NSMinYEdge];
 
 	sidebarController = [[PBGitSidebarController alloc] initWithRepository:repository superController:self];
-	//[[sidebarController view] setFrame:[sourceSplitView bounds]];
+	[[sidebarController view] setFrame:[sourceSplitView bounds]];
 	[sourceSplitView addSubview:[sidebarController view]];
 	[sourceListControlsView addSubview:sidebarController.sourceListControlsView];
 
@@ -278,15 +278,15 @@
 {
 	NSRect newFrame = [sender frame];
 
-	//float dividerThickness = [sender dividerThickness];
+	float dividerThickness = [sender dividerThickness];
 
-	//NSView *sourceView = [[sender subviews] objectAtIndex:0];
-	//NSRect sourceFrame = [sourceView frame];
-	//sourceFrame.size.height = newFrame.size.height;
+	NSView *sourceView = [[sender subviews] objectAtIndex:0];
+	NSRect sourceFrame = [sourceView frame];
+	sourceFrame.size.height = newFrame.size.height;
 
 	NSView *mainView = [[sender subviews] objectAtIndex:1];
 	NSRect mainFrame = [mainView frame];
-	//mainFrame.origin.x = sourceFrame.size.width + dividerThickness;
+	mainFrame.origin.x = sourceFrame.size.width + dividerThickness;
 	mainFrame.size.width = newFrame.size.width;
 	mainFrame.size.height = newFrame.size.height;
 
