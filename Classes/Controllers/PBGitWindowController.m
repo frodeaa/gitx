@@ -79,7 +79,7 @@
 	[[self window] setContentBorderThickness:31.0f forEdge:NSMinYEdge];
 
 	sidebarController = [[PBGitSidebarController alloc] initWithRepository:repository superController:self];
-	[[sidebarController view] setFrame:[sourceSplitView bounds]];
+	//[[sidebarController view] setFrame:[sourceSplitView bounds]];
 	[sourceSplitView addSubview:[sidebarController view]];
 	[sourceListControlsView addSubview:sidebarController.sourceListControlsView];
 
@@ -257,25 +257,19 @@
 #pragma mark -
 #pragma mark SplitView Delegates
 
-#define kGitSplitViewMinWidth 1.0f
-#define kGitSplitViewMaxWidth 300.0f
+#define kGitSplitViewMinWidth 0.0f
+#define kGitSplitViewMaxWidth 0.0f
 
 #pragma mark min/max widths while moving the divider
 
 - (CGFloat)splitView:(NSSplitView *)view constrainMinCoordinate:(CGFloat)proposedMin ofSubviewAt:(NSInteger)dividerIndex
 {
-	if (proposedMin < kGitSplitViewMinWidth)
-		return kGitSplitViewMinWidth;
-
-	return proposedMin;
+	return kGitSplitViewMinWidth;
 }
 
 - (CGFloat)splitView:(NSSplitView *)view constrainMaxCoordinate:(CGFloat)proposedMax ofSubviewAt:(NSInteger)dividerIndex
 {
-	if (dividerIndex == 0)
-		return kGitSplitViewMaxWidth;
-
-	return proposedMax;
+	return kGitSplitViewMaxWidth;
 }
 
 #pragma mark constrain sidebar width while resizing the window
@@ -284,19 +278,19 @@
 {
 	NSRect newFrame = [sender frame];
 
-	float dividerThickness = [sender dividerThickness];
+	//float dividerThickness = [sender dividerThickness];
 
-	NSView *sourceView = [[sender subviews] objectAtIndex:0];
-	NSRect sourceFrame = [sourceView frame];
-	sourceFrame.size.height = newFrame.size.height;
+	//NSView *sourceView = [[sender subviews] objectAtIndex:0];
+	//NSRect sourceFrame = [sourceView frame];
+	//sourceFrame.size.height = newFrame.size.height;
 
 	NSView *mainView = [[sender subviews] objectAtIndex:1];
 	NSRect mainFrame = [mainView frame];
-	mainFrame.origin.x = sourceFrame.size.width + dividerThickness;
-	mainFrame.size.width = newFrame.size.width - mainFrame.origin.x;
+	//mainFrame.origin.x = sourceFrame.size.width + dividerThickness;
+	mainFrame.size.width = newFrame.size.width;
 	mainFrame.size.height = newFrame.size.height;
 
-	[sourceView setFrame:sourceFrame];
+	//[sourceView setFrame:sourceFrame];
 	[mainView setFrame:mainFrame];
 }
 
