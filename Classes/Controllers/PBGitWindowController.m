@@ -257,7 +257,7 @@
 #pragma mark -
 #pragma mark SplitView Delegates
 
-#define kGitSplitViewMinWidth 150.0f
+#define kGitSplitViewMinWidth 1.0f
 #define kGitSplitViewMaxWidth 300.0f
 
 #pragma mark min/max widths while moving the divider
